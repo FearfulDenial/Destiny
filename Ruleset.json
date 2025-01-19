@@ -1,0 +1,16 @@
+
+{
+    "rules": [
+        {
+            "id": "rule1",
+            "name": "Rule 1",
+            "description": "Detects files with suspicious extensions stored within sys directories.",
+            "type": "file",
+            "conditions": {
+                "path_contains": ["C:\\Windows\\System32","/usr/bin"],
+                "extension_is": [".exe",".dll",".so"]
+            },
+            "action": "alert"
+        }
+    ]
+}
